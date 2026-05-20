@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CircleSnap — Gra Zręcznościowa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/app.css">
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="start-screen" class="screen">
+    <div class="big-title">Circle<span>Snap</span></div>
+    <div class="tagline">Reakcja · Precyzja · Wynik</div>
+
+    <div class="diff-label">Poziom trudności</div>
+    <div class="diff-row">
+      <button class="diff-btn active" data-diff="easy">Łatwy</button>
+      <button class="diff-btn" data-diff="medium">Średni</button>
+      <button class="diff-btn" data-diff="hard">Trudny</button>
+      <button class="diff-btn" data-diff="insane">Insane</button>
+    </div>
+
+    <button class="start-btn" id="start-btn">▶ START</button>
+    <div class="best-display" id="start-best"></div>
+  </div>
+
+  <!-- END SCREEN -->
+  <div id="end-screen" class="screen hidden">
+    <div class="result-title" id="result-title"></div>
+    <div class="tagline" id="result-sub"></div>
+    <div id="new-record" class="new-record hidden">◆ Nowy rekord! ◆</div>
+    <div class="end-stats">
+      <div class="stat-card">
+        <div class="label">Wynik</div>
+        <div class="value" id="end-score">0</div>
+      </div>
+      <div class="stat-card highlight">
+        <div class="label">Rekord</div>
+        <div class="value" id="end-best">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Trafienia</div>
+        <div class="value" id="end-hits">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Celność</div>
+        <div class="value" id="end-acc">0%</div>
+      </div>
+    </div>
+    <button class="start-btn" id="restart-btn">↺ ZAGRAJ PONOWNIE</button>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="hud-block" id="hud-score">
+      <span class="hud-label">Wynik</span>
+      <span class="hud-val" id="hud-score-val">0</span>
+    </div>
+    <div id="game-title">CircleSnap</div>
+    <div style="display:flex;gap:24px">
+      <div class="hud-block" id="hud-best">
+        <span class="hud-label">Rekord</span>
+        <span class="hud-val" id="hud-best-val">0</span>
+      </div>
+      <div class="hud-block" id="hud-lives">
+        <span class="hud-label">Życia</span>
+        <span class="hud-val" id="hud-lives-val">♥♥♥</span>
+      </div>
+    </div>
+  </div>
+  <div id="timer-bar-wrap"><div id="timer-bar"></div></div>
+
+  <!-- GAME AREA -->
+  <div id="game-area"></div>
+
+  <script src="./script/scripts.js"></script>
+</body>
+</html>
