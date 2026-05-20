@@ -23,9 +23,12 @@ A fast-paced browser click game built with vanilla HTML, CSS, and JavaScript. Ci
 
 ```
 circlesnap/
-├── index.html   # Markup and screen layouts
-├── app.css      # Styles, animations, and CSS variables
-└── scripts.js   # Game logic, state management, DOM interactions
+├── index.html      # Markup and screen layouts
+├── style/
+├───── app.css      # Styles, animations, and CSS variables
+├── script/
+├───── scripts.js   # Game logic, state management, DOM interactions
+└── README.md
 ```
 
 ## Running locally
